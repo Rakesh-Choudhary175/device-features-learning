@@ -35,7 +35,7 @@ function LocationPicker({ onPickedLocation }) {
   }, [route, isFocused]);
 
   useEffect(() => {
-    onPickedLocation(pickedLocation);
+    onPickedLocation({ pickedLocation, address: "home" });
   }, [pickedLocation, onPickedLocation]);
 
   async function verifyPermissions() {
